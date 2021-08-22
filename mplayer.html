@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="home">
+      <!-- <div class="favourites">
+            <span>Favourites</span>
+            <ul>
+            </ul>
+        </div> -->
+      <div class="playlists">
+        <h3>Playlists</h3>
+        <ul>
+          <li>
+            <a href="#mood">
+              <p>Mood</p>
+              <img src="image/mood.jpg" />
+            </a>
+          </li>
+          <li>
+            <a href="#chill">
+              <p>Chill</p>
+              <img src="image/chill.jpg" />
+            </a>
+          </li>
+          <li>
+            <a href="#solitude">
+              <p>Solitude</p>
+              <img src="image/solitude.jpg" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="musicplayermini">
+        <div class="miniprogressbar"></div>
+        <div class="info">
+          <div class="img-holder">
+            <img src="" />
+          </div>
+          <div class="songinfo">
+            <p class="songname"></p>
+            <p class="artist"></p>
+          </div>
+        </div>
+        <i id="love" class="material-icons">favorite_border</i>
+        <i id="play-pause" class="material-icons">play_arrow</i>
+      </div>
+    </main>
+    <main class="wrapper">
+      <section class="top">
+        <i id="expand_more" class="material-icons"> expand_more </i>
+        <div class="playlistInfo">
+          <span>PLAYING FROM PLAYLIST</span>
+          <p class="playlistName"></p>
+        </div>
+
+        <i class="material-icons">more_vertical</i>
+      </section>
+      <div class="img-holder">
+        <img src="" />
+      </div>
+
+      <div class="songinfo">
+        <p class="songname"></p>
+        <p class="artist"></p>
+      </div>
+      <div>
+        <audio id="current_music" src=""></audio>
+      </div>
+      <div class="progress-track">
+        <div draggable="true" class="progress-bar"></div>
+      </div>
+      <div class="timeinfo">
+        <span class="current-time"></span>
+        <span class="duration"></span>
+      </div>
+      <div class="controls">
+        <i id="shuffle" class="material-icons">shuffle</i>
+        <i id="prev" class="material-icons">skip_previous</i>
+        <i id="play-pause" class="material-icons">play_arrow</i>
+        <i id="next" class="material-icons">skip_next</i>
+        <i id="repeat" class="material-icons">repeat</i>
+      </div>
+    </main>
+    <main class="window3">
+      <div class="playlist_songs">
+        <div class="list" id="mood">
+          <i id="expand_more" class="material-icons"> arrow_back </i>
+          <div class="image-holder">
+            <img src="image/mood.jpg" alt="" />
+            <div class="overlay"></div>
+            <p class="plname">Mood</p>
+          </div>
+          <ol>
+            <li onclick="playfrmlist(1)">
+              <span>Batash</span>
+              <span id="sduration">3:00</span>
+              <p>Sashwot Khadka</p>
+            </li>
+          </ol>
+        </div>
+        <div class="list" id="chill">
+          <i id="expand_more" class="material-icons"> arrow_back </i>
+          <div class="image-holder">
+            <div class="overlay"></div>
+            <img src="image/chill.jpg" alt="" />
+            <p class="plname">Chill</p>
+          </div>
+          <ol>
+            <li onclick="playfrmlist(0)">
+              <span>Budi</span><span id="sduration">3:27</span>
+              <p>5:55</p>
+            </li>
+          </ol>
+        </div>
+        <div class="list" id="solitude">
+          <i id="expand_more" class="material-icons"> arrow_back </i>
+          <div class="image-holder">
+            <div class="overlay"></div>
+            <img src="image/solitude.jpg" alt="" />
+            <p class="plname">Solitude</p>
+          </div>
+          <ol>
+            <li onclick="playfrmlist(2)">
+              <span>Aaudai Jadai</span><span id="sduration">4:09</span>
+              <p>The Uglyz</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./js/audio.js"></script>
+  <script src="./js/backend.js"></script>
+</html>
