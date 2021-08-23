@@ -150,23 +150,34 @@ function playfrmlist(i) {
     togglePlayPause();
   }
 }
-// const favourites = document.querySelector('.favourites ul')
-// const love = document.querySelector('#love')
+const favourites = document.querySelector('.favourites ul')
+const love = document.querySelector('#love')
 
-// love.addEventListener("click",()=>{
-//     // toggleFav(musicIndex)
+love.addEventListener("click",()=>{
+    // toggleFav(musicIndex)
 
-//     let favStatus = allMusic[musicIndex].favourite
-//     if (!favStatus){
-//         love.innerText ="favorite"
-//     }else{
-//         love.innerText ="favorite_border"
+   let favStatus = allMusic[musicIndex].favourite
+    console.log(musicIndex)
+    if (!favStatus){
+        love.innerText ="favorite"
+    }else{
+        love.innerText ="favorite_border"
 
-//     }
-//     favStatus != favStatus
-//     addFavourites()
+    }
+    const toggle = !favStatus
+    allMusic[musicIndex].favourite =toggle
+    
+  // const index = teroarray.findIndex((element) => {
+  //   return element.songname === talaichainesongname;
+  // })
+  // const prev = !allMusic[musicIndex].favourite;
+  // allMusic[musicIndex].favourite = prev
+  console.log(toggle)
 
-// })
+    // const fs = require('fs')
+    // fs.writeFile('audio.js',favStatus)
+
+})
 // // function toggleFav
 
 // function addFavourites(){
